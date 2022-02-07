@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT SELECTOR</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".curtain").click(function(){
+                $(".curtain").hide();
+                $(".surprised").hide();
+                $(".pleased").hide();
+                $(".text3").hide();
+                $(".text4").hide();
+            });
+            $(".happy").click(function(){
+                $(".happy").hide();
+                $(".angry").show();
+                document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+                $(".text1").hide();
+                $(".text2").show();
+            });
+            $(".angry").click(function(){
+                $(".angry").hide();
+                $(".surprised").show();
+                document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+                $(".text3").show();
+                $(".text2").hide();
+            });
+            $(".surprised").click(function(){
+                $(".surprised").hide();
+                $(".pleased").show();
+                $(".text4").show();
+                $(".text3").hide();
+            });
+            $(".pleased").click(function(){
+                $(".pleased").hide();
+                $(".happy").show();
+                $(".text1").show();
+                $(".text4").hide();
+            });
+        });
+    </script>
+    <style>
+        .curtain{
+            position: absolute;
+            top: 0;
+            background-color: white;
+            width: 90%;
+            height: 100%;
+        }
+        .starterText{
+            padding: 200px 0 0 100px;
+            text-align: center;
+            color:black;
+            font-size: 80px;
+            font-family: sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        p.text1{
+            margin-top: -50px;
+            text-align: center;
+            color:black;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .text2{
+            margin-top: -50px;
+            text-align: center;
+            color:white;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .text3{
+            margin-top: -50px;
+            text-align: center;
+            color:black;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .text4{
+            margin-top: -50px;
+            text-align: center;
+            color:black;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        #container{
+            margin: 200px 0 0 515px;
+            height: 500px;
+            width: 500px;
+        }
+        .happy{
+            margin-top: 200px;
+            position: absolute;
+            top: 0;
+             width: 350px;
+             height: 350px;
+         }
+         #happy{
+             width: 15%;
+             height: auto;
+         }
+         .angry{
+             width: 100%;
+             height: auto;
+         }
+         #angry{
+             width: 70%;
+             height: auto;
+         }
+         .surprised{
+            margin-top: 200px;
+            position: absolute;
+            top: 0;
+             width: 350px;
+             height: 350px;
+         }
+         #surprised{
+             width: 70%;
+             height: auto;
+         }
+         .pleased{
+            margin-top: 210px;
+            position: absolute;
+            top: 0;
+             width: 350px;
+             height: 350px;
+         }
+         #pleased{
+             width: 70%;
+             height: auto;
+         }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="pleased">
+            <img class="pleased" src="img/4.png" alt="">
+        </div>
+        <div id="surprised">
+            <img class="surprised" src="img/6.png" alt="">
+        </div>
+        <div id="angry">
+            <img class="angry" src="img/2.png" alt="">
+        </div>
+        <div id="happy">
+            <img class="happy" src="img/1.png" alt="">
+        </div>
+    </div>
+    <p class="text4">Me voy, gracias</p>
+    <p class="text3">En realidad me ha gustado</p>
+    <p class="text2">¡No me toques!</p>
+    <p class="text1">¡Hola!</p>
+    <div class="curtain">
+        <p class="starterText">Jugar</p>
+    </div>
+</body>
+</html>
